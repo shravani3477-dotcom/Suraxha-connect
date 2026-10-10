@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuraXha Connect</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D3EBF8">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="splash" role="status">
+    <div id="spFaces" aria-hidden="true"></div>
+    <div class="sp-card">
+      <img class="sp-logo" src="icons/icon-192.png" alt="">
+      <h1 id="spName">SuraXha Connect</h1>
+      <p id="spTag"></p>
+      <div class="sp-bar"><span></span></div>
+      <button id="spSkip" onclick="hideSplash()">Start now</button>
+    </div>
+  </div>
+  <header>
+    <div class="brand"><img class="logo" src="icons/icon-192.png" alt="SuraXha Connect logo"><h1 id="title">SuraXha Connect</h1></div>
+    <div class="bar">
+      <button data-lang="en" onclick="setLang('en')">English</button>
+      <button data-lang="hi" onclick="setLang('hi')">हिंदी</button>
+      <button data-lang="mr" onclick="setLang('mr')">मराठी</button>
+    </div>
+    <div class="bar">
+      <button onclick="changeSize(-2)">A-</button>
+      <button onclick="changeSize(2)">A+</button>
+      <button id="homeBtn" onclick="render('home')">Home</button>
+    </div>
+  </header>
+  <main id="app"></main>
+  <footer id="foot"></footer>
+  <script src="data/rules.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

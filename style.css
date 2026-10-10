@@ -1,0 +1,121 @@
+/* SuraXha Connect - light palette (v6) */
+:root{
+  --ink:#1E2A38; --bg:#F5FAFF; --navy:#17405C; --teal:#0F766E;
+  --ok:#DDF3E4; --okline:#2F7D4F; --warn:#FFF4CC; --warnline:#8A6A00;
+}
+/* each module has its own pastel colour set: background, edge, text */
+.c-pension{--tbg:#FFEFB0;--tbd:#E3B400;--ttx:#4A3A00}
+.c-ayushman{--tbg:#CDEFD9;--tbd:#3FA66B;--ttx:#0F4D2E}
+.c-transit{--tbg:#CFE6FB;--tbd:#4A90D9;--ttx:#123F6B}
+.c-fd{--tbg:#E4DBFB;--tbd:#8B6FD6;--ttx:#3B2A7A}
+.c-docs{--tbg:#FFD9E2;--tbd:#E0708C;--ttx:#7A1F3D}
+.c-help{--tbg:#FFD3D0;--tbd:#E5594F;--ttx:#7A1511}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial,sans-serif;line-height:1.5;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(#D5E6F5 1.6px,transparent 1.6px);background-size:22px 22px}
+button,input{font-family:inherit;font-size:1em}
+
+/* ---------- header ---------- */
+header{position:relative;overflow:hidden;background:linear-gradient(135deg,#CFE9FB 0%,#D3F2E6 100%);color:var(--navy);
+  padding:16px 16px 8px;border-radius:0 0 24px 24px;box-shadow:0 4px 14px rgba(23,64,92,.18)}
+header::before{content:"";position:absolute;right:-40px;top:-50px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.55)}
+header::after{content:"";position:absolute;left:-30px;bottom:-60px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.4)}
+header>*{position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.logo{width:56px;height:56px;border-radius:16px;background:#fff;box-shadow:0 3px 10px rgba(23,64,92,.3);border:2px solid #fff}
+header h1{font-size:1.3em;margin:0;letter-spacing:.3px}
+.bar{display:flex;gap:8px;margin-bottom:10px}
+.bar button{flex:1;min-height:48px;font-size:18px;font-weight:700;border-radius:12px;
+  border:2px solid #7FAACB;background:#fff;color:var(--navy)}
+.bar button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* ---------- layout ---------- */
+main{padding:18px 16px;max-width:640px;margin:auto}
+h2{font-size:1.3em;margin:6px 0 10px;color:var(--navy)}
+.hero{text-align:center;background:linear-gradient(135deg,#E1F6EE,#DCEBFC);border:3px solid #6CC3AE;border-radius:22px;
+  padding:16px 14px;margin-bottom:16px;box-shadow:0 4px 0 rgba(15,118,110,.25)}
+.welcome{font-size:1.25em;font-weight:700;color:var(--navy);margin:0;line-height:1.3}
+.banner{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;border-radius:20px;
+  background:var(--tbg);color:var(--ttx);border:3px solid var(--tbd);padding:10px 16px;margin-bottom:14px;box-shadow:0 4px 0 var(--tbd)}
+.banner::after{content:"";position:absolute;right:-20px;top:-30px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.5)}
+.banner .ico{width:56px;height:56px;flex:none;background:#fff;border-radius:50%;padding:7px;border:2px solid var(--tbd);position:relative;z-index:1}
+.banner h2{color:inherit;margin:0;position:relative;z-index:1}
+.ico svg{width:100%;height:100%;display:block}
+.big{font-size:1.3em}
+
+/* ---------- home tiles ---------- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tile{position:relative;overflow:hidden;min-height:178px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  background:var(--tbg);color:var(--ttx);border:3px solid var(--tbd);border-radius:20px;font-weight:700;padding:14px 8px;text-align:center;
+  box-shadow:0 5px 0 var(--tbd)}
+.tile::after{content:"";position:absolute;right:-26px;bottom:-26px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.5);pointer-events:none}
+.tile>*{position:relative;z-index:1}
+.tile .num{position:absolute;top:8px;left:10px;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--ttx);
+  border:2px solid var(--tbd);font-size:.9em;display:flex;align-items:center;justify-content:center}
+.tile .tt{font-size:1.05em;line-height:1.25}
+.tile .dd{font-size:.82em;font-weight:600;line-height:1.3}
+.tile .ico{width:78px;height:78px;background:#fff;border-radius:50%;padding:10px;border:2px solid var(--tbd)}
+.tile:active{transform:translateY(3px);box-shadow:0 2px 0 var(--tbd)}
+@media (max-width:360px){.grid{gap:10px}.tile{min-height:168px}}
+
+/* ---------- buttons ---------- */
+.btn{width:100%;margin-top:14px;min-height:72px;font-weight:700;border:3px solid var(--navy);border-radius:16px;
+  background:#fff;color:var(--navy);padding:12px;box-shadow:0 4px 0 rgba(23,64,92,.22)}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.btn.back{background:#F1ECFD;border-color:#8B6FD6;color:#3B2A7A;box-shadow:0 4px 0 rgba(139,111,214,.35)}
+.btn.official{background:linear-gradient(135deg,#0F766E,#1596A0);border-color:#0F766E;color:#fff}
+.call,a.btn{display:block;text-align:center;text-decoration:none;line-height:1.35}
+
+/* ---------- forms ---------- */
+input{width:100%;padding:16px;border:3px solid #5B7389;border-radius:14px;margin:8px 0;background:#fff;font-size:1.15em}
+.err{color:#9B1C1C;font-weight:700;min-height:1.5em}
+.speak-msg{margin:8px 0 0;font-weight:700;font-size:.85em;color:var(--navy);line-height:1.4}
+.speak-msg:empty{display:none}
+.hint{background:#E3F2FC;border-left:6px solid #4A90D9;border-radius:10px;padding:8px 12px;margin:0 0 6px;font-size:.9em}
+
+/* ---------- result cards ---------- */
+.result{border-radius:20px;padding:18px;margin-top:12px;border:3px solid;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.result.yes{background:var(--ok);border-color:var(--okline)}
+.result.no{background:var(--warn);border-color:var(--warnline)}
+.result h2{margin-top:0;color:inherit}
+.small{font-size:.8em;color:#374151}
+
+/* ---------- lists ---------- */
+.steps,.rates{padding-left:0;list-style:none;counter-reset:n}
+.steps li,.rates li{counter-increment:n;background:#fff;border-radius:16px;padding:14px 14px 14px 62px;
+  margin-bottom:12px;position:relative;box-shadow:0 2px 8px rgba(23,64,92,.12)}
+.steps li:before,.rates li:before{content:counter(n);position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;
+  display:flex;align-items:center;justify-content:center}
+.check{display:block;background:#fff;border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(23,64,92,.12)}
+.check input{width:30px;height:30px;margin:0 12px 0 0;vertical-align:middle;accent-color:var(--teal)}
+
+footer{margin:10px 16px 24px;padding:14px;text-align:center;font-size:.8em;color:#2C3E50;
+  background:#fff;border-radius:16px;border:2px dashed #B8CCE0}
+button:focus,input:focus,a:focus{outline:4px solid #17405C;outline-offset:2px}
+
+/* ---------- welcome screen: random old-people faces in the background ---------- */
+#splash{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  padding:24px;color:var(--navy);background:linear-gradient(160deg,#E3F5F0 0%,#E4EEFC 55%,#F6EAF8 100%);transition:opacity .5s}
+#splash.hide{opacity:0;pointer-events:none}
+#spFaces{position:absolute;inset:0;z-index:0;pointer-events:none}
+.sp-face{position:absolute;opacity:.6}
+.sp-face svg{display:block;width:100%;height:100%}
+.sp-card{position:relative;z-index:1;width:100%;max-width:400px;text-align:center;padding:26px 20px;border-radius:28px;
+  background:rgba(255,255,255,.82);backdrop-filter:blur(4px);box-shadow:0 10px 30px rgba(23,64,92,.18)}
+.sp-logo{width:96px;height:96px;border-radius:24px;margin:0 0 8px;box-shadow:0 6px 18px rgba(23,64,92,.3)}
+#splash h1{font-size:2em;margin:6px 0;color:var(--navy)}
+#splash p{font-size:1.15em;margin:0 0 16px}
+.sp-bar{width:80%;height:12px;background:rgba(15,118,110,.18);border-radius:8px;overflow:hidden;margin:0 auto 20px}
+.sp-bar span{display:block;height:100%;width:0;background:var(--teal);animation:spfill 5s linear forwards}
+@keyframes spfill{to{width:100%}}
+#spSkip{min-height:64px;padding:0 32px;border:0;border-radius:16px;background:var(--teal);color:#fff;font-weight:700;font-size:1.1em;
+  box-shadow:0 4px 0 rgba(0,0,0,.2)}
+
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+.hero,.tile{animation:pop .5s ease both}
+.tile:nth-child(1){animation-delay:.05s}.tile:nth-child(2){animation-delay:.12s}.tile:nth-child(3){animation-delay:.19s}
+.tile:nth-child(4){animation-delay:.26s}.tile:nth-child(5){animation-delay:.33s}.tile:nth-child(6){animation-delay:.40s}
+@media (prefers-reduced-motion:reduce){.hero,.tile{animation:none}.sp-bar span{animation-duration:.01s}}
